@@ -1,13 +1,16 @@
-import { memo } from 'react';
-import './Notecard.css';
-const Notecard = (note, onEdit, onDelete) => {
-    const formatData = (dataString) =>{
-        return new Data(dateString).toLocalDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
+
+import { Pencil, Trash2 } from 'lucide-react'
+import './NoteCard.css'
+
+function NoteCard({ note, onEdit, onDelete }) {
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
     })
-    }
+  }
+
   return (
     <section
       className='note-card'
@@ -35,7 +38,7 @@ const Notecard = (note, onEdit, onDelete) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default memo(Notecard);
+export default NoteCard
