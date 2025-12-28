@@ -1,5 +1,5 @@
 
-import NoteCard from './Notecard'
+import NoteCard from './NoteCard'
 import './NoteList.css'
 
 function NoteList({ notes, onEdit, onDelete }) {
